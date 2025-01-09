@@ -1,0 +1,31 @@
+POST http://localhost:3000/upload-movies
+Accept: application/json
+Content-Type: multipart/form-data; boundary=MfnBoundry
+
+--MfnBoundry
+Content-Disposition: form-data; name="file"; filename="test.csv"
+Content-Type: text/plain
+
+< ./test.csv
+year;title;studios;producers;winner
+1980;Can't Stop the Music;Associated Film Distribution;Allan Carr;yes
+1980;Cruising;Lorimar Productions, United Artists;Jerry Weintraub;
+--MfnBoundry--
+###
+GET http://localhost:3000/movies
+###
+GET http://localhost:3000/movies/622c0de2-9bd5-43db-a95e-bf91421d1d7b
+###
+PUT http://localhost:3000/movies/3b0ec7b3-313a-474c-a19a-1375bba01cc8
+Content-Type: application/json
+
+{
+    "year": 1950,
+    "title": "esse é o video 010",
+    "studios": "meus estudios",
+    "producers": "os produtores",
+    "winner": "no"
+}
+###
+DELETE http://localhost:3000/movies/d159c167-ee29-4081-b7f8-d83f239fc868
+###

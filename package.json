@@ -1,0 +1,22 @@
+{
+  "name": "golden_raspberry_awards",
+  "version": "1.0.0",
+  "main": "src/app.js",
+  "type": "commonjs",
+  "scripts": {
+    "test": "jest",
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@fastify/multipart": "^9.0.1",
+    "csv-parser": "^3.1.0",
+    "fastify": "^5.2.1",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  }
+}

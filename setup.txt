@@ -1,0 +1,11 @@
+// to create package.json
+npm init -y
+// after that add the line below to package.json 
+"type": "module",
+
+
+// to run node without reload, add the line below to scripts > dev key on package.json file
+node --watch server.js
+
+// after that to run just use the line bellow:
+npm run dev
